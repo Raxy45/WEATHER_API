@@ -1,0 +1,107 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 0px;
+  padding-bottom: 40px;
+  background-image: url(../images/HomePage/v2osk-1Z2niiBPg5A-unsplash.jpg);
+  background-size: cover;
+}
+.btn {
+  width: 80%;
+  margin: auto;
+}
+.copyright {
+  margin-top: 1%;
+  color: white;
+}
+.h3 {
+  color: #212f3d;
+  font-family: "Bebas Neue", cursive;
+  font-size: 3rem;
+}
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="cityName"] {
+  margin-bottom: 7.5%;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Forecast  */
+.card {
+  opacity: 0.8;
+  background-color: linen;
+}
+.container {
+  max-width: 960px;
+}
+.description {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 1rem 0rem;
+}
+.pricing-header {
+  max-width: 700px;
+}
+.card-body {
+  padding: 0.75rem 1.25rem 0rem;
+  font-family: "Montserrat", sans-serif;
+}
+.card-header {
+  text-align: center;
+
+  font-family: "Bebas Neue", cursive;
+
+  letter-spacing: 3px;
+  font-weight: 900;
+}
+.card-title {
+  text-align: center;
+  margin: 0 auto;
+}
+.card-deck .card {
+  min-width: 220px;
+}
+@media (max-width: 992px) {
+  .h3 {
+    color: white;
+  }
+
+  /* forecast  */
+  .card {
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+  }
+  .col-me {
+    padding: 0;
+  }
+}

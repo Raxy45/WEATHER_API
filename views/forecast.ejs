@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico" />
+
+    <title>Weather Forecast</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.0/examples/sign-in/"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom styles for this template -->
+    <link href="CSS/styles.css" rel="stylesheet" />
+
+    <!-- Google Fonts  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=
+  Montserrat:wght@500;900&amp;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  
+  <body>
+    
+    <div class="container">
+        
+      <div class="row">
+        <% daysArray.forEach(function(singleDay,index){ %>
+        <div class="col-6 col-me d-lg-none">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+              <h4 class="my-0 font-weight-normal">
+                <%= singleDay.dt_txt.substring(0,10) %>
+              </h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">
+                <img
+                  src= <%= imgUrl[index] %>
+                />
+              </h1>
+              <p class="description">
+                <%= singleDay.weather[0].description %> <br />
+                <%= singleDay.main.temp %> &#8451
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- For desktop -->
+
+        <div class="col-lg-3 d-none d-lg-block">
+            <div class="card mb-4 shadow-sm">
+              <div class="card-header">
+                <h4 class="my-0 font-weight-normal">
+                  <%= singleDay.dt_txt.substring(0,10) %>
+                </h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">
+                  <img
+                    src= <%= imgUrl[index] %>
+                  />
+                </h1>
+                <p class="description">
+                  <%= singleDay.weather[0].description %> <br />
+                  <%= singleDay.main.temp %> &#8451
+                </p>
+              </div>
+            </div>
+          </div>
+
+        <% }) %>
+      </div>
+    </div>
+
+   
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"
+  ></script>
+</html>
